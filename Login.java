@@ -55,7 +55,7 @@ public class Login {
     // 3. Method to check the South African phone number format using a Regex
     public boolean checkCellPhoneNumber(String cellPhone) {
         if (cellPhone == null) return false;
-        String phoneRegex = "^(\\+27|27)\\d{9,10}$";
+        String phoneRegex = "^\\+27\\d{9}$";
         return Pattern.matches(phoneRegex, cellPhone);
     }
 
@@ -82,7 +82,7 @@ public class Login {
     // 6. Method to return the exact login status message with strict punctuation compliance
     public String returnLoginStatus(boolean isLoggedIn) {
         if (isLoggedIn) {
-            return "Welcome " + this.firstName + ", " + this.lastName + " it is great to see you again.";
+            return "Welcome " + this.firstName + ", " + this.lastName + " It is great to see you again!";
         } else {
             return "Username or password incorrect, please try again.";
         }

@@ -52,7 +52,7 @@ public class LoginTest {
         assertTrue(l.loginUser("kyl_1", "Ch&&&sec@ke99!"));
 
         // Verifying that the return message exactly matches the brief's punctuation requirements
-        String expectedMessage = "Welcome Kyle, Smith it is great to see you again.";
+        String expectedMessage = "Welcome Kyle, Smith It is great to see you again!";
         assertEquals(expectedMessage, l.returnLoginStatus(true));
     }
 }
